@@ -9,11 +9,12 @@
 import UIKit
 import MapKit
 
-class SFMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class SFMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate {
     
     let locationManager = CLLocationManager()
 
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +42,35 @@ class SFMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         mapView.showsUserLocation = (status == .AuthorizedWhenInUse)
+    }
+    @IBAction func dismissKeyboard(sender: AnyObject) {
+        self.view.endEditing(true)
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        print("Current search term: \(searchBar.text)")
+        let geoCoder:CLGeocoder = CLGeocoder()
+        if let searchedAddress = searchBar.text {
+            geoCoder.geocodeAddressString(searchedAddress, completionHandler: { (placemarks:[CLPlacemark]?, error:NSError?) -> Void in
+                if error != nil {
+                    print(error)
+                }
+                else {
+                    //CLPlacemark *placemark = [placemarks objectAtIndex:0];
+                    if let placemark:CLPlacemark = placemarks?.first {
+                        print("Found Address: \(placemark.region?.description)")
+                        let mapPlacemark:MKPlacemark = MKPlacemark(placemark: placemark)
+                        self.mapView.removeAnnotations(self.mapView.annotations)
+                        self.mapView.addAnnotation(mapPlacemark)
+                        self.mapView.setCenterCoordinate(mapPlacemark.coordinate, animated: true)
+                    }
+                    else {
+                        print("Unable to find address")
+                    }
+                }
+            })
+        }
     }
 
 }
