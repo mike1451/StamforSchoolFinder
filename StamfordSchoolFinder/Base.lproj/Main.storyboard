@@ -23,15 +23,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEe-3K-uTi">
                                 <rect key="frame" x="0.0" y="244" width="600" height="164"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School Lookup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFM-pI-ip7">
-                                        <rect key="frame" x="206" y="42" width="115" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Lookup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFM-pI-ip7">
+                                        <rect key="frame" x="244" y="8" width="112" height="19.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which school is assigned to my home?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWW-Fz-mn2">
+                                        <rect key="frame" x="175" y="35" width="250" height="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="vWW-Fz-mn2" firstAttribute="centerX" secondItem="nEe-3K-uTi" secondAttribute="centerX" id="6Yp-EO-DcR"/>
+                                    <constraint firstItem="HFM-pI-ip7" firstAttribute="top" secondItem="nEe-3K-uTi" secondAttribute="top" constant="8" id="DJ4-QF-p4a"/>
+                                    <constraint firstItem="vWW-Fz-mn2" firstAttribute="top" secondItem="HFM-pI-ip7" secondAttribute="bottom" constant="8" id="pSQ-cT-hUK"/>
+                                    <constraint firstItem="HFM-pI-ip7" firstAttribute="centerX" secondItem="nEe-3K-uTi" secondAttribute="centerX" id="rIY-vN-ETW"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Op3-VK-43x" appends="YES" id="KUd-f0-ttq"/>
                                 </connections>
@@ -81,7 +93,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-wv-HBh">
-                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="152" width="600" height="448"/>
+                                <connections>
+                                    <outlet property="delegate" destination="v7N-7V-L4e" id="rrN-Im-Atd"/>
+                                </connections>
                             </mapView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZHw-rg-1Z4">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
@@ -90,22 +105,50 @@
                                     <outlet property="delegate" destination="v7N-7V-L4e" id="wvo-Lq-2Nq"/>
                                 </connections>
                             </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Vm-jh-3o1">
+                                <rect key="frame" x="20" y="116" width="560" height="29"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="List"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="v7N-7V-L4e" eventType="valueChanged" id="68S-oi-mof"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8ut-oO-Z8I">
+                                <rect key="frame" x="20" y="152" width="560" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="v7N-7V-L4e" id="24E-Y8-ofa"/>
+                                    <outlet property="delegate" destination="v7N-7V-L4e" id="eUW-mS-Kn1"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="9Vm-jh-3o1" firstAttribute="leading" secondItem="ner-eV-ku4" secondAttribute="leadingMargin" id="58D-Ut-p5z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Vm-jh-3o1" secondAttribute="trailing" id="Bcg-kN-agS"/>
                             <constraint firstItem="ZHw-rg-1Z4" firstAttribute="top" secondItem="f9N-p1-rto" secondAttribute="bottom" id="DIa-6I-7aZ"/>
                             <constraint firstItem="gFf-wv-HBh" firstAttribute="leading" secondItem="ner-eV-ku4" secondAttribute="leadingMargin" constant="-20" id="DVF-IF-ylP"/>
+                            <constraint firstItem="9Vm-jh-3o1" firstAttribute="centerX" secondItem="ner-eV-ku4" secondAttribute="centerX" id="HKo-cr-08L"/>
                             <constraint firstItem="crV-uW-3iO" firstAttribute="top" secondItem="gFf-wv-HBh" secondAttribute="bottom" id="JZ2-pm-UAd"/>
+                            <constraint firstItem="8ut-oO-Z8I" firstAttribute="top" secondItem="9Vm-jh-3o1" secondAttribute="bottom" constant="8" id="Jkv-Aq-KtF"/>
+                            <constraint firstItem="8ut-oO-Z8I" firstAttribute="leading" secondItem="ner-eV-ku4" secondAttribute="leadingMargin" id="LWe-sm-YOt"/>
+                            <constraint firstItem="9Vm-jh-3o1" firstAttribute="top" secondItem="ZHw-rg-1Z4" secondAttribute="bottom" constant="8" id="Ppj-H0-83K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8ut-oO-Z8I" secondAttribute="trailing" id="QUU-qK-JUB"/>
                             <constraint firstItem="ZHw-rg-1Z4" firstAttribute="leading" secondItem="ner-eV-ku4" secondAttribute="leadingMargin" constant="-20" id="Qrc-yC-R3X"/>
                             <constraint firstItem="gFf-wv-HBh" firstAttribute="top" secondItem="f9N-p1-rto" secondAttribute="bottom" id="TRl-6P-i9b"/>
+                            <constraint firstItem="crV-uW-3iO" firstAttribute="top" secondItem="8ut-oO-Z8I" secondAttribute="bottom" id="TW0-TN-n3X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZHw-rg-1Z4" secondAttribute="trailing" constant="-20" id="YGk-PF-Azo"/>
+                            <constraint firstItem="gFf-wv-HBh" firstAttribute="top" secondItem="9Vm-jh-3o1" secondAttribute="bottom" constant="8" id="aUI-zR-2Xq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gFf-wv-HBh" secondAttribute="trailing" constant="-20" id="fkp-LQ-foG"/>
                             <constraint firstItem="gFf-wv-HBh" firstAttribute="top" secondItem="ZHw-rg-1Z4" secondAttribute="bottom" id="glU-xu-jcs"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="TRl-6P-i9b"/>
+                                <exclude reference="glU-xu-jcs"/>
                             </mask>
                         </variation>
                         <connections>
@@ -114,7 +157,9 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="mapListSegmentedControl" destination="9Vm-jh-3o1" id="JfX-sg-1YA"/>
                         <outlet property="mapView" destination="gFf-wv-HBh" id="zmZ-0i-I6E"/>
+                        <outlet property="resultsListTable" destination="8ut-oO-Z8I" id="ktY-R6-onG"/>
                         <outlet property="searchBar" destination="ZHw-rg-1Z4" id="7oy-M1-Uti"/>
                     </connections>
                 </viewController>
