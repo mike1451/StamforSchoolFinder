@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7482FB6C1BACE2FF008EBE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482FB6B1BACE2FF008EBE35 /* AppDelegate.swift */; };
+		7482FB6E1BACE2FF008EBE35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482FB6D1BACE2FF008EBE35 /* ViewController.swift */; };
+		7482FB711BACE2FF008EBE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7482FB6F1BACE2FF008EBE35 /* Main.storyboard */; };
+		7482FB731BACE2FF008EBE35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7482FB721BACE2FF008EBE35 /* Assets.xcassets */; };
+		7482FB761BACE2FF008EBE35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7482FB741BACE2FF008EBE35 /* LaunchScreen.storyboard */; };
+		7482FB811BACE300008EBE35 /* StamfordSchoolFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482FB801BACE300008EBE35 /* StamfordSchoolFinderTests.swift */; };
+		7482FB8C1BACE300008EBE35 /* StamfordSchoolFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482FB8B1BACE300008EBE35 /* StamfordSchoolFinderUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7482FB7D1BACE300008EBE35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7482FB601BACE2FF008EBE35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7482FB671BACE2FF008EBE35;
+			remoteInfo = StamfordSchoolFinder;
+		};
+		7482FB881BACE300008EBE35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7482FB601BACE2FF008EBE35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7482FB671BACE2FF008EBE35;
+			remoteInfo = StamfordSchoolFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7482FB681BACE2FF008EBE35 /* StamfordSchoolFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StamfordSchoolFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7482FB6B1BACE2FF008EBE35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7482FB6D1BACE2FF008EBE35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7482FB701BACE2FF008EBE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7482FB721BACE2FF008EBE35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7482FB751BACE2FF008EBE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7482FB771BACE2FF008EBE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7482FB7C1BACE300008EBE35 /* StamfordSchoolFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StamfordSchoolFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7482FB801BACE300008EBE35 /* StamfordSchoolFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamfordSchoolFinderTests.swift; sourceTree = "<group>"; };
+		7482FB821BACE300008EBE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7482FB871BACE300008EBE35 /* StamfordSchoolFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StamfordSchoolFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7482FB8B1BACE300008EBE35 /* StamfordSchoolFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamfordSchoolFinderUITests.swift; sourceTree = "<group>"; };
+		7482FB8D1BACE300008EBE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7482FB651BACE2FF008EBE35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7482FB791BACE300008EBE35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7482FB841BACE300008EBE35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7482FB5F1BACE2FF008EBE35 = {
+			isa = PBXGroup;
+			children = (
+				7482FB6A1BACE2FF008EBE35 /* StamfordSchoolFinder */,
+				7482FB7F1BACE300008EBE35 /* StamfordSchoolFinderTests */,
+				7482FB8A1BACE300008EBE35 /* StamfordSchoolFinderUITests */,
+				7482FB691BACE2FF008EBE35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7482FB691BACE2FF008EBE35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7482FB681BACE2FF008EBE35 /* StamfordSchoolFinder.app */,
+				7482FB7C1BACE300008EBE35 /* StamfordSchoolFinderTests.xctest */,
+				7482FB871BACE300008EBE35 /* StamfordSchoolFinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7482FB6A1BACE2FF008EBE35 /* StamfordSchoolFinder */ = {
+			isa = PBXGroup;
+			children = (
+				7482FB6B1BACE2FF008EBE35 /* AppDelegate.swift */,
+				7482FB6D1BACE2FF008EBE35 /* ViewController.swift */,
+				7482FB6F1BACE2FF008EBE35 /* Main.storyboard */,
+				7482FB721BACE2FF008EBE35 /* Assets.xcassets */,
+				7482FB741BACE2FF008EBE35 /* LaunchScreen.storyboard */,
+				7482FB771BACE2FF008EBE35 /* Info.plist */,
+			);
+			path = StamfordSchoolFinder;
+			sourceTree = "<group>";
+		};
+		7482FB7F1BACE300008EBE35 /* StamfordSchoolFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				7482FB801BACE300008EBE35 /* StamfordSchoolFinderTests.swift */,
+				7482FB821BACE300008EBE35 /* Info.plist */,
+			);
+			path = StamfordSchoolFinderTests;
+			sourceTree = "<group>";
+		};
+		7482FB8A1BACE300008EBE35 /* StamfordSchoolFinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7482FB8B1BACE300008EBE35 /* StamfordSchoolFinderUITests.swift */,
+				7482FB8D1BACE300008EBE35 /* Info.plist */,
+			);
+			path = StamfordSchoolFinderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7482FB671BACE2FF008EBE35 /* StamfordSchoolFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7482FB901BACE300008EBE35 /* Build configuration list for PBXNativeTarget "StamfordSchoolFinder" */;
+			buildPhases = (
+				7482FB641BACE2FF008EBE35 /* Sources */,
+				7482FB651BACE2FF008EBE35 /* Frameworks */,
+				7482FB661BACE2FF008EBE35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StamfordSchoolFinder;
+			productName = StamfordSchoolFinder;
+			productReference = 7482FB681BACE2FF008EBE35 /* StamfordSchoolFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7482FB7B1BACE300008EBE35 /* StamfordSchoolFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7482FB931BACE300008EBE35 /* Build configuration list for PBXNativeTarget "StamfordSchoolFinderTests" */;
+			buildPhases = (
+				7482FB781BACE300008EBE35 /* Sources */,
+				7482FB791BACE300008EBE35 /* Frameworks */,
+				7482FB7A1BACE300008EBE35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7482FB7E1BACE300008EBE35 /* PBXTargetDependency */,
+			);
+			name = StamfordSchoolFinderTests;
+			productName = StamfordSchoolFinderTests;
+			productReference = 7482FB7C1BACE300008EBE35 /* StamfordSchoolFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7482FB861BACE300008EBE35 /* StamfordSchoolFinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7482FB961BACE300008EBE35 /* Build configuration list for PBXNativeTarget "StamfordSchoolFinderUITests" */;
+			buildPhases = (
+				7482FB831BACE300008EBE35 /* Sources */,
+				7482FB841BACE300008EBE35 /* Frameworks */,
+				7482FB851BACE300008EBE35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7482FB891BACE300008EBE35 /* PBXTargetDependency */,
+			);
+			name = StamfordSchoolFinderUITests;
+			productName = StamfordSchoolFinderUITests;
+			productReference = 7482FB871BACE300008EBE35 /* StamfordSchoolFinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7482FB601BACE2FF008EBE35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Michael Ramos";
+				TargetAttributes = {
+					7482FB671BACE2FF008EBE35 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					7482FB7B1BACE300008EBE35 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 7482FB671BACE2FF008EBE35;
+					};
+					7482FB861BACE300008EBE35 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 7482FB671BACE2FF008EBE35;
+					};
+				};
+			};
+			buildConfigurationList = 7482FB631BACE2FF008EBE35 /* Build configuration list for PBXProject "StamfordSchoolFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7482FB5F1BACE2FF008EBE35;
+			productRefGroup = 7482FB691BACE2FF008EBE35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7482FB671BACE2FF008EBE35 /* StamfordSchoolFinder */,
+				7482FB7B1BACE300008EBE35 /* StamfordSchoolFinderTests */,
+				7482FB861BACE300008EBE35 /* StamfordSchoolFinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7482FB661BACE2FF008EBE35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7482FB761BACE2FF008EBE35 /* LaunchScreen.storyboard in Resources */,
+				7482FB731BACE2FF008EBE35 /* Assets.xcassets in Resources */,
+				7482FB711BACE2FF008EBE35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7482FB7A1BACE300008EBE35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7482FB851BACE300008EBE35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7482FB641BACE2FF008EBE35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7482FB6E1BACE2FF008EBE35 /* ViewController.swift in Sources */,
+				7482FB6C1BACE2FF008EBE35 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7482FB781BACE300008EBE35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7482FB811BACE300008EBE35 /* StamfordSchoolFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7482FB831BACE300008EBE35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7482FB8C1BACE300008EBE35 /* StamfordSchoolFinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7482FB7E1BACE300008EBE35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7482FB671BACE2FF008EBE35 /* StamfordSchoolFinder */;
+			targetProxy = 7482FB7D1BACE300008EBE35 /* PBXContainerItemProxy */;
+		};
+		7482FB891BACE300008EBE35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7482FB671BACE2FF008EBE35 /* StamfordSchoolFinder */;
+			targetProxy = 7482FB881BACE300008EBE35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7482FB6F1BACE2FF008EBE35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7482FB701BACE2FF008EBE35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7482FB741BACE2FF008EBE35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7482FB751BACE2FF008EBE35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7482FB8E1BACE300008EBE35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7482FB8F1BACE300008EBE35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7482FB911BACE300008EBE35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StamfordSchoolFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cio.be.StamfordSchoolFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7482FB921BACE300008EBE35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StamfordSchoolFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cio.be.StamfordSchoolFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7482FB941BACE300008EBE35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = StamfordSchoolFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cio.be.StamfordSchoolFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StamfordSchoolFinder.app/StamfordSchoolFinder";
+			};
+			name = Debug;
+		};
+		7482FB951BACE300008EBE35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = StamfordSchoolFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cio.be.StamfordSchoolFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StamfordSchoolFinder.app/StamfordSchoolFinder";
+			};
+			name = Release;
+		};
+		7482FB971BACE300008EBE35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StamfordSchoolFinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cio.be.StamfordSchoolFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StamfordSchoolFinder;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		7482FB981BACE300008EBE35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StamfordSchoolFinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.cio.be.StamfordSchoolFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StamfordSchoolFinder;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7482FB631BACE2FF008EBE35 /* Build configuration list for PBXProject "StamfordSchoolFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7482FB8E1BACE300008EBE35 /* Debug */,
+				7482FB8F1BACE300008EBE35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7482FB901BACE300008EBE35 /* Build configuration list for PBXNativeTarget "StamfordSchoolFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7482FB911BACE300008EBE35 /* Debug */,
+				7482FB921BACE300008EBE35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7482FB931BACE300008EBE35 /* Build configuration list for PBXNativeTarget "StamfordSchoolFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7482FB941BACE300008EBE35 /* Debug */,
+				7482FB951BACE300008EBE35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7482FB961BACE300008EBE35 /* Build configuration list for PBXNativeTarget "StamfordSchoolFinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7482FB971BACE300008EBE35 /* Debug */,
+				7482FB981BACE300008EBE35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7482FB601BACE2FF008EBE35 /* Project object */;
+}
