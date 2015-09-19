@@ -51,6 +51,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9O-4J-9Bm">
                                 <rect key="frame" x="0.0" y="416" width="600" height="164"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eAD-Kq-r2h" appends="YES" id="mh0-Of-EgT"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,6 +79,11 @@
                 <tapGestureRecognizer id="Op3-VK-43x">
                     <connections>
                         <segue destination="v7N-7V-L4e" kind="show" id="q73-vd-eWy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="eAD-Kq-r2h">
+                    <connections>
+                        <segue destination="6lg-vI-dEa" kind="show" id="F80-tc-1Oi"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -157,10 +166,12 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="dismissKeyboardGestureRecognizer" destination="I0s-hm-eZ3" id="yDl-kz-zrb"/>
                         <outlet property="mapListSegmentedControl" destination="9Vm-jh-3o1" id="JfX-sg-1YA"/>
                         <outlet property="mapView" destination="gFf-wv-HBh" id="zmZ-0i-I6E"/>
                         <outlet property="resultsListTable" destination="8ut-oO-Z8I" id="ktY-R6-onG"/>
                         <outlet property="searchBar" destination="ZHw-rg-1Z4" id="7oy-M1-Uti"/>
+                        <segue destination="Rfo-rf-suv" kind="show" identifier="showSchoolDetails" id="cra-MD-Bs8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Qp-OE-YKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,6 +182,53 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3073" y="320"/>
+        </scene>
+        <!--List of Schools-->
+        <scene sceneID="E07-af-QVp">
+            <objects>
+                <tableViewController title="List of Schools" id="6lg-vI-dEa" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Qj-a7-Vv2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IOe-gr-zeK">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IOe-gr-zeK" id="mBq-t6-cxd">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6lg-vI-dEa" id="lCf-6J-2bx"/>
+                            <outlet property="delegate" destination="6lg-vI-dEa" id="FAZ-Lo-LrZ"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14N-WI-s1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3075" y="995"/>
+        </scene>
+        <!--School Details View Controller-->
+        <scene sceneID="Vcy-in-Mba">
+            <objects>
+                <viewController id="Rfo-rf-suv" customClass="SchoolDetailsViewController" customModule="StamfordSchoolFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oeC-Ul-GMo"/>
+                        <viewControllerLayoutGuide type="bottom" id="fHQ-JR-Ves"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYG-Ho-4mZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3S-lD-VLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3755" y="320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hgp-nk-Ta8">

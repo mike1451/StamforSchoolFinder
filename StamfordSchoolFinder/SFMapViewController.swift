@@ -20,6 +20,7 @@ class SFMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     @IBOutlet var resultsListTable: UITableView!
     @IBOutlet var mapListSegmentedControl: UISegmentedControl!
     
+    @IBOutlet var dismissKeyboardGestureRecognizer: UITapGestureRecognizer!
     var currentLocation: MKUserLocation?
     var foundSchools:[String] = []
     override func viewDidLoad() {
@@ -41,16 +42,34 @@ class SFMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        if let row = resultsListTable.indexPathForSelectedRow
+        {
+            resultsListTable.deselectRowAtIndexPath(row, animated: animated)
+        }
+    }
+    
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        print("test")
+        if (segue.identifier == "showSchoolDetails")
+        {
+            if let index = self.resultsListTable.indexPathForSelectedRow {
+                    if foundSchools.count > 0 {
+                    let currentSchool = foundSchools[index.row]
+                    print("Selected School: \(currentSchool)")
+                    let schoolDetailsViewController:SchoolDetailsViewController = segue.destinationViewController as! SchoolDetailsViewController
+                    schoolDetailsViewController.currentSchool = currentSchool
+                }
+            }
+        }
     }
-    */
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         mapView.showsUserLocation = (status == .AuthorizedWhenInUse)
@@ -194,10 +213,12 @@ class SFMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     }
     @IBAction func segmentedControlValueChanged(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
+            dismissKeyboardGestureRecognizer.enabled = true
             mapView.hidden = false
             resultsListTable.hidden = true
         }
         else if sender.selectedSegmentIndex == 1 {
+            dismissKeyboardGestureRecognizer.enabled = false
             mapView.hidden = true
             resultsListTable.hidden = false
         }
@@ -219,6 +240,11 @@ class SFMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foundSchools.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("Selected index: \(indexPath.row)")
+        self.performSegueWithIdentifier("showSchoolDetails", sender: self)
     }
 
 }

@@ -30,6 +30,7 @@
 		7482FBBC1BADDA8D008EBE35 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482FBB11BADDA8D008EBE35 /* Icon-Small.png */; settings = {ASSET_TAGS = (); }; };
 		7482FBBD1BADDA8D008EBE35 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482FBB21BADDA8D008EBE35 /* Icon-Small@2x.png */; settings = {ASSET_TAGS = (); }; };
 		7482FBBE1BADDA8D008EBE35 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482FBB31BADDA8D008EBE35 /* Icon-Small@3x.png */; settings = {ASSET_TAGS = (); }; };
+		7482FBC01BAE188D008EBE35 /* SchoolDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482FBBF1BAE188D008EBE35 /* SchoolDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C463A011A81CDCA570008FE8 /* Pods_StamfordSchoolFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9D18B698C31DF60821F1AD /* Pods_StamfordSchoolFinder.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		7482FBB11BADDA8D008EBE35 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		7482FBB21BADDA8D008EBE35 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		7482FBB31BADDA8D008EBE35 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		7482FBBF1BAE188D008EBE35 /* SchoolDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolDetailsViewController.swift; sourceTree = "<group>"; };
 		8A3E61B264FE0E22BFC0BAAB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4901D4EFA8302C2D2668B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 				7482FB741BACE2FF008EBE35 /* LaunchScreen.storyboard */,
 				7482FB771BACE2FF008EBE35 /* Info.plist */,
 				7482FB9F1BACF0CD008EBE35 /* SFMapViewController.swift */,
+				7482FBBF1BAE188D008EBE35 /* SchoolDetailsViewController.swift */,
 			);
 			path = StamfordSchoolFinder;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				7482FBA01BACF0CD008EBE35 /* SFMapViewController.swift in Sources */,
 				7482FB6E1BACE2FF008EBE35 /* ViewController.swift in Sources */,
 				7482FB6C1BACE2FF008EBE35 /* AppDelegate.swift in Sources */,
+				7482FBC01BAE188D008EBE35 /* SchoolDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
