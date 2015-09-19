@@ -14,6 +14,9 @@
 		7482FB761BACE2FF008EBE35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7482FB741BACE2FF008EBE35 /* LaunchScreen.storyboard */; };
 		7482FB811BACE300008EBE35 /* StamfordSchoolFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482FB801BACE300008EBE35 /* StamfordSchoolFinderTests.swift */; };
 		7482FB8C1BACE300008EBE35 /* StamfordSchoolFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482FB8B1BACE300008EBE35 /* StamfordSchoolFinderUITests.swift */; };
+		7482FBA01BACF0CD008EBE35 /* SFMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482FB9F1BACF0CD008EBE35 /* SFMapViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7482FBA21BACF156008EBE35 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7482FBA11BACF156008EBE35 /* MapKit.framework */; };
+		7482FBA51BACF211008EBE35 /* openingscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482FBA41BACF211008EBE35 /* openingscreen.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		7482FB871BACE300008EBE35 /* StamfordSchoolFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StamfordSchoolFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7482FB8B1BACE300008EBE35 /* StamfordSchoolFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamfordSchoolFinderUITests.swift; sourceTree = "<group>"; };
 		7482FB8D1BACE300008EBE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7482FB9F1BACF0CD008EBE35 /* SFMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFMapViewController.swift; sourceTree = "<group>"; };
+		7482FBA11BACF156008EBE35 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7482FBA41BACF211008EBE35 /* openingscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openingscreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7482FBA21BACF156008EBE35 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +84,7 @@
 		7482FB5F1BACE2FF008EBE35 = {
 			isa = PBXGroup;
 			children = (
+				7482FBA11BACF156008EBE35 /* MapKit.framework */,
 				7482FB6A1BACE2FF008EBE35 /* StamfordSchoolFinder */,
 				7482FB7F1BACE300008EBE35 /* StamfordSchoolFinderTests */,
 				7482FB8A1BACE300008EBE35 /* StamfordSchoolFinderUITests */,
@@ -97,12 +105,14 @@
 		7482FB6A1BACE2FF008EBE35 /* StamfordSchoolFinder */ = {
 			isa = PBXGroup;
 			children = (
+				7482FBA31BACF1FD008EBE35 /* Images */,
 				7482FB6B1BACE2FF008EBE35 /* AppDelegate.swift */,
 				7482FB6D1BACE2FF008EBE35 /* ViewController.swift */,
 				7482FB6F1BACE2FF008EBE35 /* Main.storyboard */,
 				7482FB721BACE2FF008EBE35 /* Assets.xcassets */,
 				7482FB741BACE2FF008EBE35 /* LaunchScreen.storyboard */,
 				7482FB771BACE2FF008EBE35 /* Info.plist */,
+				7482FB9F1BACF0CD008EBE35 /* SFMapViewController.swift */,
 			);
 			path = StamfordSchoolFinder;
 			sourceTree = "<group>";
@@ -123,6 +133,14 @@
 				7482FB8D1BACE300008EBE35 /* Info.plist */,
 			);
 			path = StamfordSchoolFinderUITests;
+			sourceTree = "<group>";
+		};
+		7482FBA31BACF1FD008EBE35 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7482FBA41BACF211008EBE35 /* openingscreen.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7482FBA51BACF211008EBE35 /* openingscreen.png in Resources */,
 				7482FB761BACE2FF008EBE35 /* LaunchScreen.storyboard in Resources */,
 				7482FB731BACE2FF008EBE35 /* Assets.xcassets in Resources */,
 				7482FB711BACE2FF008EBE35 /* Main.storyboard in Resources */,
@@ -255,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7482FBA01BACF0CD008EBE35 /* SFMapViewController.swift in Sources */,
 				7482FB6E1BACE2FF008EBE35 /* ViewController.swift in Sources */,
 				7482FB6C1BACE2FF008EBE35 /* AppDelegate.swift in Sources */,
 			);
@@ -483,6 +503,7 @@
 				7482FB921BACE300008EBE35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7482FB931BACE300008EBE35 /* Build configuration list for PBXNativeTarget "StamfordSchoolFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +512,7 @@
 				7482FB951BACE300008EBE35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7482FB961BACE300008EBE35 /* Build configuration list for PBXNativeTarget "StamfordSchoolFinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +521,7 @@
 				7482FB981BACE300008EBE35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
